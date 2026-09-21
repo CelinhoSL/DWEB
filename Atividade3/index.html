@@ -1,42 +1,362 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Marcelo Tadeu Souza Lopes Júnior">
-    <meta name="description" content="Portfólio de Marcelo Tadeu Souza Lopes Júnior">
-    <meta name="keywords" content="Desenvolvedor, Web, HTML, CSS, JavaScript, Portfólio, Marcelo Tadeu Souza Lopes Júnior">
-    <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Marcelo Tadeu Souza Lopes Júnior" />
+    <meta
+      name="description"
+      content="Blog sobre API"
+    />
+    <meta
+      name="keywords"
+      content="API, Arquitetura de Software, Tecnologia"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>API</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
     <div class="header-container">
-    <header class="header">
+      <header class="header">
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                        <a href="#home" class="nav-link active">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#formation" class="nav-link">Formação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link">Habilidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Contato</a>
-                    </li>
-            </ul>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#introducao" class="nav-link active">Introdução</a>
+            </li>
+            <li class="nav-item">
+              <a href="#integracoes" class="nav-link">APIs e Integrações</a>
+            </li>
+            <li class="nav-item">
+              <a href="#conclusao" class="nav-link">Conclusão</a>
+            </li>
+            <li class="nav-item">
+              <a href="#referencias" class="nav-link">Referências</a>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
     </div>
-<h1 class="center title">
-    O que é uma API
-</h1>
+    <div class="banner-container center">
+      <img src="img/banner.jpg" alt="imagem api" class="banner center" />
+    </div>
 
-</body>
+    <h1 class="center title"><strong> O que é uma API? </strong></h1>
+
+    <div class="text-section center" id="introducao">
+      <p class="main-text">
+        No contexto da transformação digital e da ascensão de arquiteturas de
+        sistemas distribuídos, as Interfaces de Programação de Aplicações,
+        amplamente conhecidas como APIs (Application Programming Interfaces),
+        consolidaram-se como o componente central do desenvolvimento de software
+        moderno. Elas atuam como intermediárias técnicas que permitem a
+        comunicação fluida e automatizada entre sistemas heterogêneos,
+        eliminando a necessidade de intervenção humana manual e facilitando a
+        integração de dados e funcionalidades em larga escala. A adoção de
+        estratégias orientadas a APIs (API-first) reflete uma mudança de
+        paradigma nas organizações, onde estas interfaces passam a ser tratadas
+        como produtos estratégicos que fomentam a inovação, reduzem custos
+        operacionais e aceleram o tempo de lançamento (time-to-market) de novas
+        soluções. Este trabalho visa analisar os conceitos fundamentais das
+        APIs, explorando seus principais estilos arquiteturais, tipos de
+        governança, ferramentas de suporte e os imperativos de segurança que
+        regem as integrações de sistemas contemporâneas.
+      </p>
+    </div>
+    <main>
+      <div class="center">
+        <div class="main-section">
+          <ol start="2">
+            <li id="integracoes">
+              <h2 class="subtitle"><strong>APIs E INTEGRAÇÕES</strong></h2>
+
+              <h3>2.1. Conceito e funcionamento de APIs</h3>
+              <p class="main-text">
+                Tecnicamente, uma API é um conjunto de definições e protocolos
+                que permite que um cliente (software solicitante) interaja com
+                um servidor (software provedor) de forma estruturada. Em vez de
+                acessar diretamente o código ou o banco de dados de terceiros, o
+                cliente envia uma requisição para um ponto de extremidade
+                (endpoint) específico e recebe uma resposta em um formato
+                pré-definido, geralmente legível por máquinas.
+              </p>
+              <p class="main-text">
+                Em ambientes de microsserviços, as APIs desempenham um papel
+                crítico na orquestração de interações, permitindo que serviços
+                granulares operem de forma independente enquanto mantêm a
+                resiliência e a agilidade do sistema como um todo. Essa
+                independência é garantida pela separação de responsabilidades,
+                permitindo evoluções na interface de usuário sem impactar a
+                lógica de negócio ou o banco de dados central.
+              </p>
+
+              <h3>2.2. Arquiteturas de API: REST, SOAP e GraphQL</h3>
+              <p class="main-text">
+                O ecossistema de APIs evoluiu através de diferentes estilos
+                arquiteturais, cada um abordando desafios específicos de
+                performance, flexibilidade e governança:
+              </p>
+              <ul class="main-text">
+                <li>
+                  <strong>REST (Representational State Transfer):</strong>
+                  Proposto por Roy Fielding em 2000, o REST baseia-se nos
+                  princípios nativos do protocolo HTTP, como a ausência de
+                  estado (statelessness) e interfaces uniformes. É o estilo mais
+                  utilizado mundialmente (cerca de 75%), sendo ideal para
+                  aplicações web e móveis devido à sua simplicidade e
+                  interoperabilidade. Contudo, apresenta limitações como o
+                  over-fetching (envio de dados excessivos) e desafios no
+                  versionamento sob escala.
+                </li>
+                <li>
+                  <strong>SOAP (Simple Object Access Protocol):</strong> Um
+                  protocolo rígido baseado em XML que oferece contratos de
+                  serviço formais via WSDL (Web Services Description Language).
+                  Embora considerado "pesado" frente ao REST, o SOAP continua
+                  sendo indispensável em setores que exigem alta segurança
+                  transacional, como bancos e sistemas de saúde, devido ao
+                  suporte nativo a padrões como WS-Security.
+                </li>
+                <li>
+                  <strong>GraphQL:</strong> Desenvolvido pelo Facebook em 2015,
+                  o GraphQL oferece um modelo baseado em grafos onde o cliente
+                  especifica exatamente os dados necessários em uma única
+                  requisição. Isso resolve os problemas de recuperação
+                  ineficiente de dados típicos do REST, sendo especialmente
+                  valioso em sistemas com entidades complexas e
+                  interconectadas, como redes de bioinformática ou interfaces
+                  móveis dinâmicas.
+                </li>
+              </ul>
+
+              <h3>2.3. APIs Públicas, Privadas e de Parceiros</h3>
+              <p class="main-text">
+                A classificação das APIs depende de seu escopo de exposição e
+                governança:
+              </p>
+              <ul class="main-text">
+                <li>
+                  <strong>APIs Públicas:</strong> Voltadas para desenvolvedores
+                  externos, priorizando a facilidade de adoção e a conformidade
+                  com padrões de mercado para incentivar o crescimento de
+                  ecossistemas externos.
+                </li>
+                <li>
+                  <strong>APIs Privadas (ou Internas):</strong> Utilizadas
+                  exclusivamente dentro de uma organização para conectar
+                  microsserviços e sistemas internos, focando em performance
+                  administrativa e controle total da infraestrutura.
+                </li>
+                <li>
+                  <strong>APIs de Parceiros:</strong> Facilitam a integração
+                  estratégica entre empresas, reduzindo drasticamente os custos
+                  de conexão em parcerias comerciais e viabilizando modelos
+                  como o Open Banking.
+                </li>
+              </ul>
+
+              <h3>2.4. HTTP, Métodos e Requisições: JSON e XML</h3>
+              <p class="main-text">
+                As APIs modernas utilizam os métodos padronizados do protocolo
+                HTTP para definir as operações sobre os recursos: GET para
+                recuperação de informações, POST para criação, PUT e PATCH para
+                atualizações totais ou parciais, e DELETE para exclusão. No que
+                tange aos formatos de dados, o JSON (JavaScript Object Notation)
+                tornou-se o padrão predominante por ser leve e eficiente na
+                transmissão sobre redes móveis, superando o XML, que, apesar de
+                mais verboso, ainda é utilizado por sua rigidez estrutural em
+                protocolos como o SOAP.
+              </p>
+
+              <h3>2.5. Integração entre sistemas e exemplos práticos</h3>
+              <p class="main-text">
+                As APIs permitem modernizar infraestruturas obsoletas sem a
+                necessidade de substituições integrais arriscadas. O padrão
+                Strangler Fig, por exemplo, utiliza um API Gateway como fachada
+                à frente de um sistema monolítico antigo, redirecionando
+                gradualmente o tráfego para novos microsserviços à medida que as
+                funcionalidades são extraídas.
+              </p>
+              <p class="main-text">
+                Na área de IoT (Internet das Coisas), APIs integram dispositivos
+                de borda, como o Raspberry Pi, a servidores centrais para
+                monitorar, por exemplo, a jornada de trabalho de motoristas,
+                utilizando leitores biométricos e RFID para garantir a
+                integridade dos dados operacionais e o cumprimento da legislação
+                trabalhista. Outro exemplo notável é o recurso ZincBind, que
+                utiliza GraphQL para permitir consultas complexas sobre bancos
+                de dados de proteínas, facilitando a disseminação de dados
+                biológicos em redes de pesquisa.
+              </p>
+
+              <h3>2.6. Ferramentas: Postman, Swagger/OpenAPI e Insomnia</h3>
+              <p class="main-text">
+                O ciclo de vida de uma API é suportado por ferramentas
+                essenciais:
+              </p>
+              <ul class="main-text">
+                <li>
+                  O <strong>Postman</strong> é o ecossistema líder para testes e
+                  documentação, com mais de 35 milhões de coleções públicas que
+                  facilitam a exploração de serviços por desenvolvedores.
+                </li>
+                <li>
+                  A especificação <strong>OpenAPI (Swagger)</strong> permite
+                  descrever endpoints, parâmetros e esquemas de resposta de
+                  forma padronizada, possibilitando a geração automática de
+                  documentação técnica e casos de teste.
+                </li>
+                <li>
+                  Ferramentas como o <strong>Insomnia</strong> e o
+                  <strong>Altair</strong> complementam este cenário, oferecendo
+                  ambientes robustos para depuração e análise de requisições,
+                  especialmente em contextos de GraphQL.
+                </li>
+              </ul>
+
+              <h3>2.7. Segurança: Autenticação, Autorização e Protocolos</h3>
+              <p class="main-text">
+                A exposição de serviços em redes públicas exige medidas
+                rigorosas de proteção. O padrão OAuth 2.0 consolidou-se como o
+                mecanismo dominante para autorização delegada, permitindo acesso
+                a recursos sem a partilha de credenciais. Complementarmente, o
+                JWT (JSON Web Token) é amplamente utilizado para autenticação
+                stateless, incorporando informações de identidade e datas de
+                expiração em tokens assinados digitalmente.
+              </p>
+              <p class="main-text">
+                Para garantir a confidencialidade, o uso de HTTPS (TLS 1.2 ou
+                superior) é obrigatório em todas as transmissões de tokens. Em
+                cenários financeiros de alta sensibilidade, adotam-se as
+                Financial-grade APIs (FAPI), que exigem controles adicionais,
+                como o PKCE (Proof Key for Code Exchange), para mitigar riscos
+                de roubo ou interceptação de tokens. Adicionalmente, frameworks
+                modernos propõem recursos como AEAR (Auto Expire Auto Refresh)
+                para gerenciar o ciclo de vida dos tokens de forma segura e
+                automatizada.
+              </p>
+
+              <h3>2.8. Vantagens, Desafios e Aplicações</h3>
+              <p class="main-text">
+                As APIs oferecem vantagens cruciais, como agilidade no
+                desenvolvimento, escalabilidade e modularidade. No entanto, a
+                crescente complexidade das integrações traz desafios, como a
+                necessidade de monitoramento contínuo e a mitigação de novos
+                vetores de ataque. O GraphQL, por exemplo, embora eficiente, é
+                vulnerável a ataques de negação de serviço (DoS) por meio de
+                consultas profundamente aninhadas (nested queries) ou sobrecarga
+                de aliases, exigindo estratégias de limites de profundidade e
+                pontuação de complexidade para manter a disponibilidade do
+                servidor.
+              </p>
+            </li>
+
+            <li id="conclusao">
+              <h2 class="subtitle"><strong>CONCLUSÃO</strong></h2>
+              <p class="main-text">
+                As APIs deixaram de ser meros conectores técnicos para se
+                tornarem os pilares da economia digital e da arquitetura de
+                software contemporânea. A transição para modelos flexíveis como
+                o GraphQL e a padronização via OpenAPI permitem que organizações
+                modernizem sistemas legados com menor risco e maior
+                previsibilidade.
+              </p>
+              <p class="main-text">
+                Apesar das inúmeras vantagens em termos de agilidade e inovação,
+                a segurança permanece como o ponto de maior atenção, exigindo
+                uma abordagem de Confiança Zero (Zero Trust) e a adoção de
+                padrões rigorosos de autenticação e criptografia. O futuro
+                aponta para estratégias de APIs políglotas, onde diferentes
+                paradigmas (REST, gRPC, GraphQL) coexistem estrategicamente para
+                atender às demandas específicas de cada carga de trabalho.
+              </p>
+            </li>
+
+            <li id="referencias">
+              <h2 class="subtitle"><strong>REFERÊNCIAS</strong></h2>
+
+              <ul class="reference-list">
+                <li>
+                  ADDANKI, S. Architectural Shifts in API Design: The
+                  Progression from SOAP to REST and GraphQL.
+                  IJSAT, v. 16, n. 2, 2025.
+                </li>
+                <li>
+                  AMER, M.; SOBH, T. S. New Framework for Securing Web APIs
+                  Token-based Authentication / Authorization with Auto Expire
+                  Auto Refresh (AEAR) Features.
+                  International Journal of Computer Applications,
+                  v. 186, n. 25, 2024.
+                </li>
+                <li>
+                  ATUL, B. et al. Authorization Security and Identity Management
+                  in Web Application Development Using Java and Spring Boot
+                  Security.
+                  <cite
+                    >International Journal on Advanced Computer Theory and
+                    Engineering</cite
+                  >, v. 15, n. 2S, 2026.
+                </li>
+                <li>
+                  GADDAM, K. R. A cloud-native reference architecture for
+                  modernizing legacy financial systems.
+                  <cite
+                    >World Journal of Advanced Engineering Technology and
+                    Sciences</cite
+                  >, v. 15, n. 02, 2025.
+                </li>
+                <li>
+                  GINTING, D. N.; WIDJAJARTO, A.; HEDIYANTO, U. Y. K. S.
+                  Denial-of-Service Modeling: Time and CPU Utilization During
+                  GraphQL Attacks.
+                  INTEK Jurnal Penelitian, v. 12, n. 1, 2025.
+                </li>
+                <li>
+                  IRELAND, S. M.; MARTIN, A. C. R. GraphQL for the delivery of
+                  bioinformatics web APIs and application to ZincBind.
+                  Bioinformatics Advances, v. 1, n. 1, 2021.
+                </li>
+                <li>
+                  KOGLER, L. et al. RESTestBench: A Benchmark for Evaluating the
+                  Effectiveness of LLM-Generated REST API Test Cases from NL
+                  Requirements. arXiv, 2026.
+                </li>
+                <li>
+                  KUMAR, A. A.; TL, D. Security measures implemented in RESTful
+                  API Development.
+                  <cite
+                    >Open Access Research Journal of Engineering and
+                    Technology</cite
+                  >, v. 07, n. 01, 2024.
+                </li>
+                <li>
+                  MUDASSIR, M.; MUSHTAQ, M. The role of APIs in modern software
+                  development.
+                  <cite
+                    >World Journal of Advanced Engineering Technology and
+                    Sciences</cite
+                  >, v. 13, n. 01, 2024.
+                </li>
+                <li>
+                  SIMPSON, J. The Top API Architectural Styles of 2025.
+                  Nordic APIs, 2025.
+                </li>
+                <li>
+                  TANGUDU, R. A Comparative Design Study of REST, GraphQL and
+                  gRPC APIs for Large-Scale Applications.
+                  International Journal of Science and Research Archive,
+                  v. 18, n. 03, 2026.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy;Marcelo Tadeu Souza Lopes Júnior. </p>
+    </footer>
+
+  </body>
 </html>
