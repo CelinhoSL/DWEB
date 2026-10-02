@@ -1,0 +1,87 @@
+.caixa-responsiva {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+
+.rotulo-faixa {
+    text-align: center;
+}
+
+.rotulo-faixa::before {
+    content: "Cinza ";
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .caixa-responsiva {
+        width: 280px;
+        height: 280px;
+        background-color: orange;
+    }
+
+    .rotulo-faixa::before {
+        content: "Laranja ";
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .caixa-responsiva {
+        width: 360px;
+        height: 360px;
+        background-color: pink;
+    }
+
+    .rotulo-faixa::before {
+        content: "Rosa ";
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .caixa-responsiva {
+        width: 440px;
+        height: 440px;
+        background-color: red;
+    }
+
+    .rotulo-faixa::before {
+        content: "Vermelho ";
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .caixa-responsiva {
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+    }
+
+    .rotulo-faixa::before {
+        content: "Azul ";
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .caixa-responsiva {
+        width: 600px;
+        height: 600px;
+        background-color: yellow;
+    }
+
+    .rotulo-faixa::before {
+        content: "Amarelo ";
+    }
+}
+
+@media (min-width: 1921px) {
+    .caixa-responsiva {
+        width: 700px;
+        height: 700px;
+        background-color: green;
+    }
+
+    .rotulo-faixa::before {
+        content: "Verde ";
+    }
+}
